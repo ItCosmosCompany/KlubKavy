@@ -217,7 +217,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 /* Динамічний адаптив */
 // Документація: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
