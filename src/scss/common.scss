@@ -1,0 +1,59 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.page {
+   // .page__welcom
+   &__welcom {
+   }
+}
+.first-page{
+   max-height: 100vh;
+   // overflow: hidden;
+}
+//========================================================================================================================================================
+.menu {
+   // .menu__body
+   &__body {
+      @media (max-width: rem(1020)){
+         position: absolute;
+         left: 0;
+         top: 0;
+         left: -100%;
+         // z-index: 2;
+         width: 100%;
+         padding-top: rem(150);
+         background-color: #14110e;
+         height: 100%;
+         transition: all 0.3s ease 0s;
+      }
+   }
+}
+
+.menu-open{
+   .menu {
+      // .menu__body
+      &__body {
+         @media (max-width: rem(1020) ){
+            left: 0;
+            padding-left: rem(25);
+            font-size: rem(36);
+            line-height: math.div(48 , 36);
+         }
+      }
+      // .menu__list
+      &__list {
+         li{
+            &:not(:last-child) {
+               margin-bottom: rem(30);
+            }
+         }
+      }
+   }
+}
+
+.actions-flex{
+   @media (max-width: rem(1020)){
+      display: flex;
+      @include adaptiveValue("gap", 40, 25);
+      align-items: center;
+   }
+}
+

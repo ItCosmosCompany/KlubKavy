@@ -1,0 +1,87 @@
+//====================================================================================================
+
+.welcom {
+   position: relative;
+   min-height:100vh;
+   display: flex;
+   flex-direction: column;
+
+   &__contante{
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: center;
+      // align-items: center;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.188);
+      position: relative;
+      z-index: 3;
+      
+   }
+   // .welcom__body
+   &__body {
+      position: relative;
+      z-index: 2;
+      @include adaptiveValue("padding-left", 80, 25,0,1920,767);
+		@include adaptiveValue("padding-right", 80, 25,0,1920,767);
+   }
+   // .welcom__title
+   &__title {
+      @include adaptiveValue("font-size", 72, 32);
+      line-height: 110%;
+      @include adaptiveValue("margin-bottom", 10, 5);
+      @include adaptiveValue("margin-left", -7, -2);
+
+   }
+   // .welcom__sub-title
+   &__sub-title {
+      max-width: rem(450);
+      // @include adaptiveValue("padding-top", 12, 7);
+
+      @include adaptiveValue("font-size", 20, 16);
+      line-height: 165%;
+      color: rgba(255, 255, 255, 0.805);
+      text-transform: capitalize; 
+      font-family: 'Roboto';
+   }
+   // .welcom__button
+   &__button {
+      @include adaptiveValue("font-size", 24, 20);
+      line-height: math.div(28 , 24);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: rgba(0, 0, 0, 0.8);
+
+      font-family: 'Roboto';
+      font-weight: 400;
+
+      background: linear-gradient(176.03deg, rgba(0, 0, 0, 0.4) -26.86%, rgba(0, 0, 0, 0) 110.76%), #A37959;
+      box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.3);
+
+      @include adaptiveValue("padding-top", 15, 12);
+      @include adaptiveValue("padding-bottom", 15, 12);
+      @include adaptiveValue("padding-right", 96, 35);
+      @include adaptiveValue("padding-left", 96, 35);
+
+      color: rgba(255, 255, 255, 0.75);
+      border-radius: rem(20);
+      display: inline-block;
+      @include adaptiveValue("margin-top", 30, 25);
+      transition: all 0.3s ease 0s;
+
+      @media (any-hover: hover){
+         &:hover{
+            background-color: #795133;
+         }
+      }
+   }
+   // .welcom__bg
+   &__bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+   }
+}
+//====================================================================================================

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+   @@include('html/_head.htm',{ "title":"Стартова сторінка" })
+   <body>
+      <div class="wrapper">
+         <div class="first-page">
+            @@include('html/_header.htm',{})
+            <main class="page">
+               <div class="page__welcom welcom">
+                  <div class="welcom__contante">
+                        <div class="welcom__body">
+                           <div class="welcom__title">Насолоджуйтесь <br>Ранковою Кавою</div>
+                           <div class="welcom__sub-title">Кава заварюється шляхом обсмажування зелених зерен кави на гарячому вугіллі у  жаровні.</div>
+                           <div class="welcom__button"> <a href="">обрати каву</a> </div>
+                        </div>
+                     </div>
+                     <video autoplay muted loop poster="img/welcom/welcom_poster.png" preload="auto" class="welcom__bg">
+                        <!-- <source type="video/webm" src="img/welcom/welcom_bg_2.webm"> -->
+                        <source type="video/mp4" src="img/welcom/welcom-bg_z.mp4">
+                     </video>
+                  </div>
+         </div>
+         </main>
+         @@include('html/_footer.htm',{})
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
+</html>
