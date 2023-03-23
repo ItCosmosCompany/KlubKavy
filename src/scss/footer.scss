@@ -89,6 +89,9 @@
          font-size: rem(28);
          position: absolute;
          bottom: 30px;
+         &::before{
+            margin-left: rem(7);
+         }
       }
    }
 }
