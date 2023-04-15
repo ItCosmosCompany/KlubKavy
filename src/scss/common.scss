@@ -3,6 +3,18 @@
    // .page__welcom
    &__welcom {
    }
+
+   // .page__coffee
+   &__coffee {
+   }
+
+   // .page__workers
+   &__workers {
+   }
+
+   // .page__map
+   &__map {
+   }
 }
 .first-page{
    max-height: 100vh;
@@ -57,3 +69,12 @@
    }
 }
 
+.c-icon {
+   --star-active: #000;
+   --star-inactive: #6c6962;
+   fill: var(--star-inactive);
+}
+
+.c-icon.active {
+   fill: var(--star-active);
+}
