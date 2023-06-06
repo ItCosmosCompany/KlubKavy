@@ -100,11 +100,6 @@
 		z-index: 5;
 
 		transition: all 0.3s ease 0s;
-		@media (any-hover: hover){
-			&:hover{
-				color: #C99E71;
-			}
-		}
 	}
 	// .services-header__lang
 	&__lang {

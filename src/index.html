@@ -1,28 +1,1239 @@
 <!DOCTYPE html>
 <html lang="en">
-   @@include('html/_head.htm',{ "title":"Стартова сторінка" })
-   <body>
-      <div class="wrapper">
-         <div class="first-page">
-            @@include('html/_header.htm',{})
-            <main class="page">
-               <div class="page__welcom welcom">
-                  <div class="welcom__contante">
-                        <div class="welcom__body">
-                           <div class="welcom__title">Насолоджуйтесь <br>Ранковою Кавою</div>
-                           <div class="welcom__sub-title">Кава заварюється шляхом обсмажування зелених зерен кави на гарячому вугіллі у  жаровні.</div>
-                           <div class="welcom__button"> <a href="">обрати каву</a> </div>
-                        </div>
-                     </div>
-                     <video autoplay muted loop poster="img/welcom/welcom_poster.png" preload="auto" class="welcom__bg">
-                        <!-- <source type="video/webm" src="img/welcom/welcom_bg_2.webm"> -->
-                        <source type="video/mp4" src="img/welcom/welcom-bg_z.mp4">
-                     </video>
+@@include('html/_head.htm',{ "title":"Стартова сторінка" })
+
+<body data-active>
+   <div class="wrapper">
+      <div class="first-page">
+         @@include('html/_header.htm',{})
+         <main class="page">
+            <section class="page__welcom welcom">
+               <div class="welcom__contante">
+                  <div class="welcom__body">
+                     <div class="welcom__title">Насолоджуйтесь <br>Ранковою Кавою</div>
+                     <div class="welcom__sub-title">Кава заварюється шляхом обсмажування зелених зерен кави на гарячому
+                        вугіллі у жаровні.</div>
+                     <div class="welcom__button" data-goto=".choise"> <a href="#" >обрати каву</a> </div>
                   </div>
-         </div>
-         </main>
-         @@include('html/_footer.htm',{})
+               </div>
+               <video autoplay muted loop poster="img/welcom/welcom_poster.jpg" preload="auto" class="welcom__bg">
+                  <source type="video/mp4" src="files/welcom_bg.mp4">
+               </video>
+            </section>
       </div>
-      @@include('html/_js.htm',{})
-   </body>
+
+      <main class="main">
+         <div class="main__container">
+             <section class="choise">
+                 <h1 class="choise__title">Наша Смачна Кава</h1>
+                 <div class="tabs" data-tabs="">
+                     <nav class="tabs__navigation" data-tabs-titles=""><button class="tabs__title _tab-active"
+                             type="button">Кава</button><button class="tabs__title" type="button">Десерти</button><button
+                             class="tabs__title" type="button">Інші напої</button></nav>
+                     <div class="tabs__content" data-tabs-body="">
+                         <div class="tabs__body animate__animated animate__fadeIn">
+                             <div class="tabs__body-wrap">
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>01</span> Еспрессо</h3><img
+                                         class="tabs__body-block_img-first" src="../img/espresso.jpg" alt="espresso" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Еспрессо - це сила, енергія і насолода в
+                                             кожній краплі.</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>02</span> Американо</h3><img
+                                         class="tabs__body-block_img-second" src="../img/americano.jpg" alt="americano" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Американо - це м’який і освіжаючий кавовий
+                                             напій.</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>03</span> Капучино</h3><img
+                                         class="tabs__body-block_img-thirth" src="../img/capuch.png" alt="capuchino" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Капучино - це ніжна, пухнаста і солодка кава
+                                             з молоком.</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>04</span> Мокачіно</h3><img
+                                         class="tabs__body-block_img-fourth" src="../img/mocachino.jpg" alt="mokachino" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Мокачіно - це кавовий напій з молоком і
+                                             шоколадом.</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>05</span> Лате</h3><img
+                                         class="tabs__body-block_img-fifth" src="../img/late.jpg" alt="late" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Лате - це молочний кавовий напій з пінкою.
+                                         </p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>06</span> Раф</h3><img
+                                         class="tabs__body-block_img-sixth" src="../img/raf.jpg" alt="raf" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Раф - це кавовий напій з вершками і ваніллю.
+                                         </p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="tabs__body animate__animated animate__fadeIn">
+                             <div class="tabs__body-wrap">
+                              <div class="tabs__body-block block_basket" id="rel"> 
+                                 
+                                 <h3 class="tabs__body-block_title">
+                                    <span>01</span> Круасани з лососем
+                                 </h3>
+                                 <div class="product__quantity"></div>
+                                 <img class="tabs__body-block_img-first1" src="../img/Vector-5.svg" alt="losos" />
+                                 
+                                 <div class="tabs__body-block_hover" id="dessert">
+                                    <div class="tabs__body-block_hover-price">
+      
+                                       <div class="tabs__body-block_hover-price__item">
+                                          Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                       </div>
+                                       
+                                       <p class="tabs__body-block_hover-price__item">
+                                          Вага: <span>250г</span>
+                                       </p>
+                                    </div>
+                                    <div class="wrap-desc">
+                                       <p class="tabs__body-block_hover-desc" id="dessert_desc">Соковитий лосось між
+                                           хрусткими шматочками круасана</p>
+                                    </div>
+                                    <!-- <button class="tabs__body-block_hover-btn"></button> -->
+      
+                                    <button
+                                       class="add-to-cart tabs__body-block_hover-btn  "
+                                       data-sb-id-or-vendor-code="01"
+                                       data-sb-product-name="Круасани з лососем"
+                                       data-sb-product-price="150"
+                                       data-sb-product-quantity="1"
+                                       data-sb-product-img="@img/Vector-5.svg">
+                                          <i class="fas fa-cart-plus"></i>
+                                    </button>
+      
+                                 </div>
+                              </div>
+                              <div class="tabs__body-block block_basket" id="rel">
+                                 <h3 class="tabs__body-block_title">
+                                    <span>02</span> Брауні
+                                 </h3>
+                                 <div class="product__quantity"></div>
+                                 <img class="tabs__body-block_img-second1" src="../img/Vector-4.svg" alt="brauni" />
+                                 <div class="tabs__body-block_hover" id="dessert">
+                                    <div class="tabs__body-block_hover-price">
+      
+                                       <div class="tabs__body-block_hover-price__item">
+                                          Ціна:<p class="product-block__back-price"><span class="prise-basket">  55</span>грн</p>
+                                       </div>
+                                       
+                                       <p class="tabs__body-block_hover-price__item">
+                                          Вага: <span>100г</span>
+                                       </p>
+                                    </div>
+                                    <div class="wrap-desc">
+                                       <p class="tabs__body-block_hover-desc" id="dessert_desc">Ніжний шоколадний
+                                          десерт, який тане в роті</p>
+                                    </div>
+                                    <!-- <button class="tabs__body-block_hover-btn"></button> -->
+      
+                                    <button
+                                       class="add-to-cart tabs__body-block_hover-btn  "
+                                       data-sb-id-or-vendor-code="02"
+                                       data-sb-product-name="Брауні"
+                                       data-sb-product-price="55"
+                                       data-sb-product-quantity="1"
+                                       data-sb-product-img="@img/Vector-4.svg">
+                                          <i class="fas fa-cart-plus"></i>
+                                    </button>
+      
+                                 </div>
+                              </div>
+                              <div class="tabs__body-block block_basket" id="rel">
+                                 <h3 class="tabs__body-block_title">
+                                    <span>03</span> Павлова
+                                 </h3>
+                                 <div class="product__quantity"></div>
+                                 <img class="tabs__body-block_img-thirth1" src="../img/Vector-3.svg" alt="pavlova" />
+                                 <div class="tabs__body-block_hover" id="dessert">
+                                    <div class="tabs__body-block_hover-price">
+      
+                                       <div class="tabs__body-block_hover-price__item">
+                                          Ціна:<p class="product-block__back-price"><span class="prise-basket">  77</span>грн</p>
+                                       </div>
+                                       
+                                       <p class="tabs__body-block_hover-price__item">
+                                          Вага: <span>90г</span>
+                                       </p>
+                                    </div>
+                                    <div class="wrap-desc">
+                                       <p class="tabs__body-block_hover-desc" id="dessert_desc">Легкий, ніжний,
+                                          хрусткий</p>
+                                    </div>
+                                    <!-- <button class="tabs__body-block_hover-btn"></button> -->
+      
+                                    <button
+                                       class="add-to-cart tabs__body-block_hover-btn  "
+                                       data-sb-id-or-vendor-code="03"
+                                       data-sb-product-name="Павлова"
+                                       data-sb-product-price="77"
+                                       data-sb-product-quantity="1"
+                                       data-sb-product-img="@img/Vector-3.svg">
+                                          <i class="fas fa-cart-plus"></i>
+                                    </button>
+      
+                                 </div>
+                              </div>
+                              <div class="tabs__body-block block_basket" id="rel">
+                                 <h3 class="tabs__body-block_title">
+                                    <span>04</span> Кекс Столичний
+                                 </h3>
+                                 <div class="product__quantity"></div>
+                                 <img class="tabs__body-block_img-fourth1" src="../img/Vector-2.svg" alt="keks" />
+                                 <div class="tabs__body-block_hover" id="dessert">
+                                    <div class="tabs__body-block_hover-price">
+      
+                                       <div class="tabs__body-block_hover-price__item">
+                                          Ціна:<p class="product-block__back-price"><span class="prise-basket">  45</span>грн</p>
+                                       </div>
+                                       
+                                       <p class="tabs__body-block_hover-price__item">
+                                          Вага: <span>90г</span>
+                                       </p>
+                                    </div>
+                                    <div class="wrap-desc">
+                                       <p class="tabs__body-block_hover-desc" id="dessert_desc">Повітряний, ароматний,
+                                          розсипчастий</p>
+                                    </div>
+                                    <!-- <button class="tabs__body-block_hover-btn"></button> -->
+      
+                                    <button
+                                       class="add-to-cart tabs__body-block_hover-btn  "
+                                       data-sb-id-or-vendor-code="04"
+                                       data-sb-product-name="Кекс Столичний"
+                                       data-sb-product-price="45"
+                                       data-sb-product-quantity="1"
+                                       data-sb-product-img="@img/Vector-2.svg">
+                                          <i class="fas fa-cart-plus"></i>
+                                    </button>
+      
+                                 </div>
+                              </div>
+                              <div class="tabs__body-block block_basket" id="rel">
+                                 <h3 class="tabs__body-block_title">
+                                    <span>05</span> Львівський Сирник
+                                 </h3>
+                                 <div class="product__quantity"></div>
+                                 <img class="tabs__body-block_img-fifth1" src="../img/Vector-1.svg" alt="sirnik" />
+                                 <div class="tabs__body-block_hover" id="dessert">
+                                    <div class="tabs__body-block_hover-price">
+      
+                                       <div class="tabs__body-block_hover-price__item">
+                                          Ціна:<p class="product-block__back-price"><span class="prise-basket">  60</span>грн</p>
+                                       </div>
+                                       
+                                       <p class="tabs__body-block_hover-price__item">
+                                          Вага: <span>120г</span>
+                                       </p>
+                                    </div>
+                                    <div class="wrap-desc">
+                                       <p class="tabs__body-block_hover-desc" id="dessert_desc">Має повітряну текстуру,
+                                          ароматну скоринку та м’яку сирну середину</p>
+                                    </div>
+                                    <!-- <button class="tabs__body-block_hover-btn"></button> -->
+      
+                                    <button
+                                       class="add-to-cart tabs__body-block_hover-btn  "
+                                       data-sb-id-or-vendor-code="05"
+                                       data-sb-product-name="Львівський Сирник"
+                                       data-sb-product-price="60"
+                                       data-sb-product-quantity="1"
+                                       data-sb-product-img="@img/Vector-1.svg">
+                                          <i class="fas fa-cart-plus"></i>
+                                    </button>
+      
+                                 </div>
+                              </div>
+                              <div class="tabs__body-block block_basket" id="rel">
+                                 <h3 class="tabs__body-block_title">
+                                    <span>06</span> Макаронс
+                                 </h3>
+                                 <div class="product__quantity"></div>
+                                 <img class="tabs__body-block_img-sixth1" src="../img/Vector.svg" alt="makarons" />
+                                 <div class="tabs__body-block_hover" id="dessert">
+                                    <div class="tabs__body-block_hover-price">
+      
+                                       <div class="tabs__body-block_hover-price__item">
+                                          Ціна:<p class="product-block__back-price"><span class="prise-basket">  80</span>грн</p>
+                                       </div>
+                                       
+                                       <p class="tabs__body-block_hover-price__item">
+                                          Вага: <span>100г</span>
+                                       </p>
+                                    </div>
+                                    <div class="wrap-desc">
+                                       <p class="tabs__body-block_hover-desc" id="dessert_desc">Мініатюрне тістечко
+                                          родом з Франції</p>
+                                    </div>
+                                    <!-- <button class="tabs__body-block_hover-btn"></button> -->
+      
+                                    <button
+                                       class="add-to-cart tabs__body-block_hover-btn  "
+                                       data-sb-id-or-vendor-code="06"
+                                       data-sb-product-name="Макаронс"
+                                       data-sb-product-price="80"
+                                       data-sb-product-quantity="1"
+                                       data-sb-product-img="@img/Vector.svg">
+                                          <i class="fas fa-cart-plus"></i>
+                                    </button>
+      
+                                 </div>
+                              </div>
+                                 <div class="block" data-showmore="">
+                                     <div class="block__content" data-showmore-content="">
+                                         <div class="tabs__body-wrap">
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>07</span> Маренговий Рулет
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-first7" src="../img/rulet.jpg"
+                                             alt="rulet" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  75</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>90г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Ніжний і
+                                                      повітряний смак</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="07"
+                                                   data-sb-product-name="Маренговий Рулет"
+                                                   data-sb-product-price="75"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/rulet.jpg">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>08</span> Трубочки
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-second8" src="../img/trubochki.png"
+                                             alt="trubochki" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  50</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>100г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Солодкий
+                                                      смак і хрустка текстура</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="08"
+                                                   data-sb-product-name="Трубочки"
+                                                   data-sb-product-price="50"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/trubochki.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>09</span> Торт з Маракуєю
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-thirth9" src="../img/tort.png"
+                                             alt="marakuya" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>110г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Смачно та
+                                                      екзотично</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="09"
+                                                   data-sb-product-name="Торт з Маракуєю"
+                                                   data-sb-product-price="150"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tort.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>10</span> Торт Карамель - Фундук
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-fourth10" src="../img/tortfunduk.png"
+                                                alt="funduk" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">З ніжного
+                                                      бісквіту, крему з вареної згущенки та хрусткого фундука</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="10"
+                                                   data-sb-product-name="Торт Карамель - Фундук"
+                                                   data-sb-product-price="150"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tortfunduk.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>11</span> Торт Червоний Оксамит
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-fifth11" src="../img/tortocsamit.png"
+                                                alt="oksamit" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">З червоних
+                                                      шоколадних коржів і білого вершкового крему</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="11"
+                                                   data-sb-product-name="Торт Червоний Оксамит"
+                                                   data-sb-product-price="150"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tortocsamit.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>12</span> Торт шоколад з вишнею
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-sixth12" src="../img/tortzvishn.png"
+                                                alt="tortzvishney" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Шоколадний
+                                                      бісквіт, просочений солодким вишневим сиропом і соковита вишня</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="12"
+                                                   data-sb-product-name="Торт шоколад з вишнею"
+                                                   data-sb-product-price="150"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tortzvishn.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>13</span> Торт Снікерс
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-first13" src="../img/snicker.png"
+                                                alt="sniker" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Десерт для
+                                                      справжніх любителів шоколаду та арахісу</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="13"
+                                                   data-sb-product-name="Торт Снікерс"
+                                                   data-sb-product-price="150"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/snicker.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>14</span> Торт Горіховий
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-second14" src="../img/tortgorich.png"
+                                                alt="gorich" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Горіховий
+                                                      тортик з ніжним кавовим кремом.</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="14"
+                                                   data-sb-product-name="Торт Горіховий"
+                                                   data-sb-product-price="150"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tortgorich.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>15</span> Торт Фісташка - Малина
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-thirth15"
+                                                src="../img/tortfistashka.png" alt="fistashka" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Бісквіт зі
+                                                      шматочками фісташкового горіха злегка просочений малиновим
+                                                      сиропом</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="15"
+                                                   data-sb-product-name="Торт Фісташка - Малина"
+                                                   data-sb-product-price="150"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tortfistashka.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>16</span> Торт Естерхазі
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-fourth16" src="../img/tortextazi.png"
+                                                alt="tortextazi" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Горіхові
+                                                      фундучні коржі прошаровані вершково-заварним кремом зі згущеним
+                                                      молоком</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="16"
+                                                   data-sb-product-name="Торт Естерхазі"
+                                                   data-sb-product-price="250"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tortextazi.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>17</span> Торт зі згущеним молоком
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-fifth17" src="../img/tortmilk.png"
+                                                alt="milk" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">М’який та
+                                                      ніжний десерт</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="17"
+                                                   data-sb-product-name="Торт зі згущеним молоком"
+                                                   data-sb-product-price="250"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tortmilk.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                          <div class="tabs__body-block block_basket" id="rel">
+                                             <h3 class="tabs__body-block_title">
+                                                <span>18</span> Торт Київський
+                                             </h3>
+                                             <div class="product__quantity"></div>
+                                             <img class="tabs__body-block_img-sixth18" src="../img/tortkiyv.png"
+                                                alt="kiyv" />
+                                             <div class="tabs__body-block_hover" id="dessert">
+                                                <div class="tabs__body-block_hover-price">
+                  
+                                                   <div class="tabs__body-block_hover-price__item">
+                                                      Ціна:<p class="product-block__back-price"><span class="prise-basket">  150</span>грн</p>
+                                                   </div>
+                                                   
+                                                   <p class="tabs__body-block_hover-price__item">
+                                                      Вага: <span>250г</span>
+                                                   </p>
+                                                </div>
+                                                <div class="wrap-desc">
+                                                   <p class="tabs__body-block_hover-desc" id="dessert_desc">Неймовірно
+                                                      ніжний бісквіт просочений вершковим кремом</p>
+                                                </div>
+                                                <!-- <button class="tabs__body-block_hover-btn"></button> -->
+                  
+                                                <button
+                                                   class="add-to-cart tabs__body-block_hover-btn  "
+                                                   data-sb-id-or-vendor-code="18"
+                                                   data-sb-product-name="Торт Київський"
+                                                   data-sb-product-price="150"
+                                                   data-sb-product-quantity="1"
+                                                   data-sb-product-img="@img/tortkiyv.png">
+                                                      <i class="fas fa-cart-plus"></i>
+                                                </button>
+                  
+                                             </div>
+                                          </div>
+                                         </div>
+                                     </div><button class="block__more" type="button"
+                                         data-showmore-button="data-showmore-button" hidden="hidden"><span
+                                             class="block__more-img"></span> </button>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="tabs__body animate__animated animate__fadeIn">
+                             <div class="tabs__body-wrap">
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>01</span> Чорний чай</h3><img
+                                         class="tabs__body-block_img-first" src="../img/tea/blacktea.svg" alt="blacktea" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Чорний чай - чудовий напій, який дарує силу і
+                                             бадьорість,</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>02</span> Зелений чай</h3><img
+                                         class="tabs__body-block_img-second" src="../img/tea/greentea.svg" alt="greentea" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Зелений чай - витончений смак. Повний
+                                             користі.</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>03</span> Еко чай</h3><img
+                                         class="tabs__body-block_img-thirth" src="../img/tea/ecotea.svg" alt="ecotea" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Еко чай - зібраний з любов'ю до природи.
+                                             Корисний та смачний</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>04</span> Какао</h3><img
+                                         class="tabs__body-block_img-fourth" src="../img/tea/cacao.svg" alt="cacao" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Какао - смачний та ароматний напій для
+                                             дорослих та дітей.</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>05</span> Ягідний чай</h3><img
+                                         class="tabs__body-block_img-fifth" src="../img/tea/mixtea.svg" alt="mixtea" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Ягідний чай - багатий на вітаміни.Смачний та
+                                             освіжаючий</p>
+                                     </div>
+                                 </div>
+                                 <div class="tabs__body-block">
+                                     <h3 class="tabs__body-block_title"><span>06</span> Травяний чай</h3><img
+                                         class="tabs__body-block_img-sixth" src="../img/tea/grasstea.svg" alt="grasstea" />
+                                     <div class="tabs__body-block_hover">
+                                         <p class="tabs__body-block_hover-desc">Трав'яний чай - натуральна медицина. Насолода
+                                             для тіла</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+             <section class="products">
+                 <div class="products-block__slider swiper">
+                     <div class="products-block__wrapper swiper-wrapper">
+                         <div class="products-block__slide swiper-slide">
+                           <div class="rotate-block block_basket">
+                              <div class="change-img">
+                                 <div class="front-side-img">
+                                    <div class="product-block">
+                                       <img class="product-block__img" src="@img/tuffler.png" alt="coffeeBag" />
+                                       <div class="something">
+                                          <h3 class="product-block__title">
+                                             Ціна: <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          </h3>
+                                          <h3 class="product-block__title">
+                                             Colombia Narino
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="back-side-img">
+                                    <div class="product-block__back">
+                                       <h3 class="product-block__back-title">
+                                          Colombia Narino
+                                       </h3>
+                                       <div class="wrapper-back">
+                                          <div class="product-block__back-star_first">
+                                             <h4 class="product-block__back-star_first-title">
+                                                Кислинка
+                                             </h4>
+                                             <div class="stars-block__first">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <div class="product-block__back-star_second">
+                                             <h4 class="product-block__back-star_second-title">
+                                                Гірчинка
+                                             </h4>
+                                             <div class="stars-block__second">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <h3 class="product-block__back-title_sec">
+                                             Смак
+                                          </h3>
+                                          <p class="product-block__back-desc">
+                                             збалансований, з відтінками тростинного
+                                             цукру і цитрусової кислотністю
+                                          </p>
+                                       </div>
+                                       <div class="product-block__back-item">
+                                          <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          <div class="product__size">
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="117" data-sb-curent-size="100" data-sb-curent-id-or-vendor-code="100">100 г</div>
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="343" data-sb-curent-size="250" data-sb-curent-id-or-vendor-code="250">250 г</div>
+                                          </div>
+                                       </div>
+                                       <div class="quantity" data-quantity="">
+                                          <div class="product__quantity">
+                                          </div>
+                                          <button
+                                             class="tabs__body-block_hover-btn_new add-to-cart"
+                                             data-sb-id-or-vendor-code="01"
+                                             data-sb-product-name="Colombia Narino"
+                                             data-sb-product-price="117"
+                                             data-sb-product-quantity="1"
+                                             data-sb-product-img="img/tuffler.png">
+                                                <i class="fas fa-cart-plus"></i>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                         </div>
+                         <div class="products-block__slide swiper-slide">
+                           
+                           <div class="rotate-block block_basket">
+                              <div class="change-img">
+                                 <div class="front-side-img">
+                                    <div class="product-block">
+                                       <img class="product-block__img" src="@img/tuffler.png" alt="coffeeBag" />
+                                       <div class="something">
+                                          <h3 class="product-block__title">
+                                             Ціна: <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          </h3>
+                                          <h3 class="product-block__title">
+                                             Colombia Narino
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="back-side-img">
+                                    <div class="product-block__back">
+                                       <h3 class="product-block__back-title">
+                                          Colombia Narino
+                                       </h3>
+                                       <div class="wrapper-back">
+                                          <div class="product-block__back-star_first">
+                                             <h4 class="product-block__back-star_first-title">
+                                                Кислинка
+                                             </h4>
+                                             <div class="stars-block__first">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <div class="product-block__back-star_second">
+                                             <h4 class="product-block__back-star_second-title">
+                                                Гірчинка
+                                             </h4>
+                                             <div class="stars-block__second">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <h3 class="product-block__back-title_sec">
+                                             Смак
+                                          </h3>
+                                          <p class="product-block__back-desc">
+                                             збалансований, з відтінками тростинного
+                                             цукру і цитрусової кислотністю
+                                          </p>
+                                       </div>
+                                       <div class="product-block__back-item">
+                                          <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          <div class="product__size">
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="117" data-sb-curent-size="100" data-sb-curent-id-or-vendor-code="100">100 г</div>
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="343" data-sb-curent-size="250" data-sb-curent-id-or-vendor-code="250">250 г</div>
+                                          </div>
+                                       </div>
+                                       <div class="quantity" data-quantity="">
+                                          <div class="product__quantity">
+                                          </div>
+                                          <button
+                                             class="tabs__body-block_hover-btn_new add-to-cart"
+                                             data-sb-id-or-vendor-code="01"
+                                             data-sb-product-name="Colombia Narino"
+                                             data-sb-product-price="117"
+                                             data-sb-product-quantity="1"
+                                             data-sb-product-img="img/tuffler.png">
+                                                <i class="fas fa-cart-plus"></i>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                         </div>
+                         <div class="products-block__slide swiper-slide">
+                           <div class="rotate-block block_basket">
+                              <div class="change-img">
+                                 <div class="front-side-img">
+                                    <div class="product-block">
+                                       <img class="product-block__img" src="@img/tuffler.png" alt="coffeeBag" />
+                                       <div class="something">
+                                          <h3 class="product-block__title">
+                                             Ціна: <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          </h3>
+                                          <h3 class="product-block__title">
+                                             Colombia Narino
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="back-side-img">
+                                    <div class="product-block__back">
+                                       <h3 class="product-block__back-title">
+                                          Colombia Narino
+                                       </h3>
+                                       <div class="wrapper-back">
+                                          <div class="product-block__back-star_first">
+                                             <h4 class="product-block__back-star_first-title">
+                                                Кислинка
+                                             </h4>
+                                             <div class="stars-block__first">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <div class="product-block__back-star_second">
+                                             <h4 class="product-block__back-star_second-title">
+                                                Гірчинка
+                                             </h4>
+                                             <div class="stars-block__second">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <h3 class="product-block__back-title_sec">
+                                             Смак
+                                          </h3>
+                                          <p class="product-block__back-desc">
+                                             збалансований, з відтінками тростинного
+                                             цукру і цитрусової кислотністю
+                                          </p>
+                                       </div>
+                                       <div class="product-block__back-item">
+                                          <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          <div class="product__size">
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="117" data-sb-curent-size="100" data-sb-curent-id-or-vendor-code="100">100 г</div>
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="343" data-sb-curent-size="250" data-sb-curent-id-or-vendor-code="250">250 г</div>
+                                          </div>
+                                       </div>
+                                       <div class="quantity" data-quantity="">
+                                          <div class="product__quantity">
+                                          </div>
+                                          <button
+                                             class="tabs__body-block_hover-btn_new add-to-cart"
+                                             data-sb-id-or-vendor-code="01"
+                                             data-sb-product-name="Colombia Narino"
+                                             data-sb-product-price="117"
+                                             data-sb-product-quantity="1"
+                                             data-sb-product-img="img/tuffler.png">
+                                                <i class="fas fa-cart-plus"></i>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                         </div>
+                         <div class="products-block__slide swiper-slide">
+                           <div class="rotate-block block_basket">
+                              <div class="change-img">
+                                 <div class="front-side-img">
+                                    <div class="product-block">
+                                       <img class="product-block__img" src="@img/tuffler.png" alt="coffeeBag" />
+                                       <div class="something">
+                                          <h3 class="product-block__title">
+                                             Ціна: <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          </h3>
+                                          <h3 class="product-block__title">
+                                             Colombia Narino
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="back-side-img">
+                                    <div class="product-block__back">
+                                       <h3 class="product-block__back-title">
+                                          Colombia Narino
+                                       </h3>
+                                       <div class="wrapper-back">
+                                          <div class="product-block__back-star_first">
+                                             <h4 class="product-block__back-star_first-title">
+                                                Кислинка
+                                             </h4>
+                                             <div class="stars-block__first">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <div class="product-block__back-star_second">
+                                             <h4 class="product-block__back-star_second-title">
+                                                Гірчинка
+                                             </h4>
+                                             <div class="stars-block__second">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <h3 class="product-block__back-title_sec">
+                                             Смак
+                                          </h3>
+                                          <p class="product-block__back-desc">
+                                             збалансований, з відтінками тростинного
+                                             цукру і цитрусової кислотністю
+                                          </p>
+                                       </div>
+                                       <div class="product-block__back-item">
+                                          <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          <div class="product__size">
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="117" data-sb-curent-size="100" data-sb-curent-id-or-vendor-code="100">100 г</div>
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="343" data-sb-curent-size="250" data-sb-curent-id-or-vendor-code="250">250 г</div>
+                                          </div>
+                                       </div>
+                                       <div class="quantity" data-quantity="">
+                                          <div class="product__quantity">
+                                          </div>
+                                          <button
+                                             class="tabs__body-block_hover-btn_new add-to-cart"
+                                             data-sb-id-or-vendor-code="01"
+                                             data-sb-product-name="Colombia Narino"
+                                             data-sb-product-price="117"
+                                             data-sb-product-quantity="1"
+                                             data-sb-product-img="img/tuffler.png">
+                                                <i class="fas fa-cart-plus"></i>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                         </div>
+                         <div class="products-block__slide swiper-slide">
+                           <div class="rotate-block block_basket">
+                              <div class="change-img">
+                                 <div class="front-side-img">
+                                    <div class="product-block">
+                                       <img class="product-block__img" src="@img/tuffler.png" alt="coffeeBag" />
+                                       <div class="something">
+                                          <h3 class="product-block__title">
+                                             Ціна: <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          </h3>
+                                          <h3 class="product-block__title">
+                                             Colombia Narino
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="back-side-img">
+                                    <div class="product-block__back">
+                                       <h3 class="product-block__back-title">
+                                          Colombia Narino
+                                       </h3>
+                                       <div class="wrapper-back">
+                                          <div class="product-block__back-star_first">
+                                             <h4 class="product-block__back-star_first-title">
+                                                Кислинка
+                                             </h4>
+                                             <div class="stars-block__first">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <div class="product-block__back-star_second">
+                                             <h4 class="product-block__back-star_second-title">
+                                                Гірчинка
+                                             </h4>
+                                             <div class="stars-block__second">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <h3 class="product-block__back-title_sec">
+                                             Смак
+                                          </h3>
+                                          <p class="product-block__back-desc">
+                                             збалансований, з відтінками тростинного
+                                             цукру і цитрусової кислотністю
+                                          </p>
+                                       </div>
+                                       <div class="product-block__back-item">
+                                          <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          <div class="product__size">
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="117" data-sb-curent-size="100" data-sb-curent-id-or-vendor-code="100">100 г</div>
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="343" data-sb-curent-size="250" data-sb-curent-id-or-vendor-code="250">250 г</div>
+                                          </div>
+                                       </div>
+                                       <div class="quantity" data-quantity="">
+                                          <div class="product__quantity">
+                                          </div>
+                                          <button
+                                             class="tabs__body-block_hover-btn_new add-to-cart"
+                                             data-sb-id-or-vendor-code="01"
+                                             data-sb-product-name="Colombia Narino"
+                                             data-sb-product-price="117"
+                                             data-sb-product-quantity="1"
+                                             data-sb-product-img="img/tuffler.png">
+                                                <i class="fas fa-cart-plus"></i>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                         </div>
+                         <div class="products-block__slide swiper-slide">
+                           <div class="rotate-block block_basket">
+                              <div class="change-img">
+                                 <div class="front-side-img">
+                                    <div class="product-block">
+                                       <img class="product-block__img" src="@img/tuffler.png" alt="coffeeBag" />
+                                       <div class="something">
+                                          <h3 class="product-block__title">
+                                             Ціна: <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          </h3>
+                                          <h3 class="product-block__title">
+                                             Colombia Narino
+                                          </h3>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="back-side-img">
+                                    <div class="product-block__back">
+                                       <h3 class="product-block__back-title">
+                                          Colombia Narino
+                                       </h3>
+                                       <div class="wrapper-back">
+                                          <div class="product-block__back-star_first">
+                                             <h4 class="product-block__back-star_first-title">
+                                                Кислинка
+                                             </h4>
+                                             <div class="stars-block__first">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <div class="product-block__back-star_second">
+                                             <h4 class="product-block__back-star_second-title">
+                                                Гірчинка
+                                             </h4>
+                                             <div class="stars-block__second">
+                                                <img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/black-star.svg" alt="black-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" /><img class="stars-block__first-item" src="img/vacuous-star.svg" alt="vacuous-star" />
+                                             </div>
+                                          </div>
+                                          <h3 class="product-block__back-title_sec">
+                                             Смак
+                                          </h3>
+                                          <p class="product-block__back-desc">
+                                             збалансований, з відтінками тростинного
+                                             цукру і цитрусової кислотністю
+                                          </p>
+                                       </div>
+                                       <div class="product-block__back-item">
+                                          <div class="product-block__back-price"><span class="prise-basket">117</span> грн</div>
+                                          <div class="product__size">
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="117" data-sb-curent-size="100" data-sb-curent-id-or-vendor-code="100">100 г</div>
+                                             <div class="product__size-element product-block__back-item__btn" data-sb-curent-price="343" data-sb-curent-size="250" data-sb-curent-id-or-vendor-code="250">250 г</div>
+                                          </div>
+                                       </div>
+                                       <div class="quantity" data-quantity="">
+                                          <div class="product__quantity">
+                                          </div>
+                                          <button
+                                             class="tabs__body-block_hover-btn_new add-to-cart"
+                                             data-sb-id-or-vendor-code="01"
+                                             data-sb-product-name="Colombia Narino"
+                                             data-sb-product-price="117"
+                                             data-sb-product-quantity="1"
+                                             data-sb-product-img="img/tuffler.png">
+                                                <i class="fas fa-cart-plus"></i>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                         </div>
+                     </div><button class="swiper-button-prev prev" type="button"> </button><button
+                         class="swiper-button-next next" type="button"> </button>
+                 </div>
+             </section>
+         </div>
+     </main>
+   @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_js.htm',{})
+</body>
 </html>
